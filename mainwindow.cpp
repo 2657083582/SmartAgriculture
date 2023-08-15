@@ -2,16 +2,6 @@
 #include "ui_mainwindow.h"
 #include "mqtt/qmqtt_message.h"
 #include <QDebug>
-#include <QProcess>
-#include <QSerialPort>
-#include <QUrlQuery>
-#include <QNetworkRequest>
-
-#if 1
-    // 移动短信接口
-QString _sdkAppId = "qq21497936";
-QString _sdkAppKey = "f16095a81858314a3dbe16fdc4ec04d9";
-#endif
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -166,73 +156,6 @@ void MainWindow::saveFile(QString path,QList<Data> datalist)
     }
 }
 
-void MainWindow::sendSMS(const QString &mobile, const QString &content)
-{
-    QString baseUrl = QString("https://api.yonyoucloud.com/apis/dst/mobilemessage/sendmessage");
-
-    QUrl url;
-    url.setUrl(baseUrl);
-    QUrlQuery urlQuery;
-    urlQuery.addQueryItem("ac", "send");
-    // 笔者平台账户
-    urlQuery.addQueryItem("uid", _sdkAppId);
-    // 笔者平台账户接口密码
-    urlQuery.addQueryItem("pwd", _sdkAppKey);
-    urlQuery.addQueryItem("template", "100006");
-    urlQuery.addQueryItem("mobile", mobile);
-    urlQuery.addQueryItem("content", QString("{\"code\":\"%1\"}").arg(content));
-    url.setQuery(urlQuery);
-    _manager.get(QNetworkRequest(url));
-
-//    QSerialPort serial;
-//    serial.setPortName("/dev/ttyUSB0"); // 根据实际情况修改串口设备路径
-//    serial.setBaudRate(QSerialPort::Baud115200); // 设置波特率
-//    serial.setDataBits(QSerialPort::Data8);
-//    serial.setParity(QSerialPort::NoParity);
-//    serial.setStopBits(QSerialPort::OneStop);
-//    serial.setFlowControl(QSerialPort::NoFlowControl);
-
-//    if (!serial.open(QIODevice::ReadWrite))
-//    {
-//        qDebug() << "无法打开串口!\n"<<serial.error();
-//        return;
-//    }
-
-//    // 发送AT指令初始化GSM模块
-//    serial.write("AT\r\n");
-//    serial.waitForBytesWritten(-1);
-//    serial.waitForReadyRead(-1);
-//    QByteArray response = serial.readAll();
-//    qDebug() << "初始化响应：" << response;
-
-//    // 设置短信格式为PDU模式
-//    serial.write("AT+CMGF=0\r\n");
-//    serial.waitForBytesWritten(-1);
-//    serial.waitForReadyRead(-1);
-//    response = serial.readAll();
-//    qDebug() << "设置短信格式响应：" << response;
-
-//    // 构建PDU格式的短信内容
-//    QByteArray pdu = QString("0011000B81%1F00000AA1%2").arg(phoneNumber).arg(message.toLatin1().toHex()).toUpper().toUtf8();
-//    int pduLength = pdu.length() / 2;
-
-//    // 发送短信
-//    serial.write(QString("AT+CMGS=%1\r\n").arg(pduLength).toUtf8());
-//    serial.waitForBytesWritten(-1);
-//    serial.waitForReadyRead(-1);
-//    response = serial.readAll();
-//    qDebug() << "发送短信响应：" << response;
-
-//    serial.write(pdu + '\x1A'); // 发送短信内容和结束符
-//    serial.waitForBytesWritten(-1);
-//    serial.waitForReadyRead(-1);
-//    response = serial.readAll();
-//    qDebug() << "发送短信结果：" << response;
-
-//    serial.close();
-}
-
-
 void MainWindow::on_test_button_clicked()
 {
     QList<Data> datalist=sql.queryAll();
@@ -249,8 +172,5 @@ void MainWindow::on_test_button_clicked()
         // 用户取消了文件夹选择
         qDebug() << "取消选择文件夹";
     }
-    const QString phonenumber="15086759102";
-    const QString message="hello";
-    sendSMS(phonenumber, message);
 }
 

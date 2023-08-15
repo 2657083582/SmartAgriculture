@@ -56,7 +56,5 @@ private:
     void change_prperties(QStringList strlist);
     void insertData(QStringList strlist);
     void saveFile(QString path,QList<Data> datalist);
-
-    void sendSMS(const QString& phoneNumber, const QString& message);
 };
 #endif // MAINWINDOW_H
