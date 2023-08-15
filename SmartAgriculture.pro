@@ -10,18 +10,23 @@ CONFIG += c++20
 
 SOURCES += \
     login.cpp \
+    logindata.cpp \
     main.cpp \
     mainwindow.cpp \
+    registration.cpp \
     sqldata.cpp
 
 HEADERS += \
     login.h \
+    logindata.h \
     mainwindow.h \
+    registration.h \
     sqldata.h
 
 FORMS += \
     login.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    registration.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
