@@ -6,40 +6,37 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>749</width>
-    <height>231</height>
+    <width>750</width>
+    <height>570</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>749</width>
-    <height>231</height>
+    <width>750</width>
+    <height>570</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>750</width>
-    <height>540</height>
+    <height>570</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>智慧农业平台</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(180, 211, 206);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>731</width>
-      <height>171</height>
+      <x>40</x>
+      <y>52</y>
+      <width>241</width>
+      <height>221</height>
      </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
     </property>
     <property name="minimumSize">
      <size>
@@ -49,172 +46,812 @@
     </property>
     <property name="maximumSize">
      <size>
-      <width>100000</width>
-      <height>100000</height>
+      <width>10000</width>
+      <height>10000</height>
      </size>
     </property>
-    <widget class="QPushButton" name="ctl_auto_button">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(225, 232, 231);</string>
+    </property>
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>630</x>
-       <y>139</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>自动</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="temp_label">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>39</y>
-       <width>231</width>
-       <height>42</height>
+       <x>60</x>
+       <y>10</y>
+       <width>131</width>
+       <height>35</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <pointsize>20</pointsize>
-       <italic>false</italic>
-       <bold>true</bold>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
-      <string>环境温度：----</string>
+      <string>设备控制</string>
      </property>
     </widget>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>11</x>
-       <y>39</y>
-       <width>223</width>
-       <height>93</height>
+       <x>0</x>
+       <y>60</y>
+       <width>247</width>
+       <height>134</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QLabel" name="humi_label">
-        <property name="font">
-         <font>
-          <pointsize>20</pointsize>
-          <bold>true</bold>
-         </font>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="minimumSize">
+           <size>
+            <width>81</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>48</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">image: url(:/风扇.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="fan_state">
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Switch_label" name="ctl_fan_button">
+          <property name="minimumSize">
+           <size>
+            <width>91</width>
+            <height>61</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>91</width>
+            <height>61</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+image: url(:/滑动按钮（X） (1).png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="minimumSize">
+           <size>
+            <width>81</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">image: url(:/水泵.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="pump_state">
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Switch_label" name="ctl_pump_button">
+          <property name="minimumSize">
+           <size>
+            <width>91</width>
+            <height>61</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>91</width>
+            <height>61</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">image: url(:/滑动按钮（X） (1).png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="Switch_label" name="auto_label">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>20</y>
+       <width>31</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="lineWidth">
+      <number>2</number>
+     </property>
+     <property name="text">
+      <string>自动</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>41</x>
+      <y>300</y>
+      <width>241</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>241</width>
+      <height>241</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>241</width>
+      <height>241</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(225, 232, 231);</string>
+    </property>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>10</y>
+       <width>131</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>阈值设置</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="temp_label_2">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>75</y>
+       <width>115</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>115</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>--°C</string>
+     </property>
+    </widget>
+    <widget class="Switch_label" name="temp_edit">
+     <property name="geometry">
+      <rect>
+       <x>204</x>
+       <y>85</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>25</width>
+       <height>61</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+image: url(:/修改.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="humi_label_2">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>160</y>
+       <width>115</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>115</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>--%RH</string>
+     </property>
+    </widget>
+    <widget class="Switch_label" name="humi_edit">
+     <property name="geometry">
+      <rect>
+       <x>204</x>
+       <y>165</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>25</width>
+       <height>61</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/修改.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>56</y>
+       <width>55</width>
+       <height>55</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>55</width>
+       <height>55</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>55</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/温度传感器.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>117</y>
+       <width>52</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>温度阈值</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>145</y>
+       <width>55</width>
+       <height>55</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>55</width>
+       <height>55</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>55</width>
+       <height>55</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/湿度.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>206</y>
+       <width>52</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>湿度阈值</string>
+     </property>
+    </widget>
+    <widget class="ModifyLineEdit" name="lineEdit_temp">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>80</y>
+       <width>121</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="ModifyLineEdit" name="lineEdit_humi">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>160</y>
+       <width>121</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <zorder>temp_edit</zorder>
+    <zorder>humi_label_2</zorder>
+    <zorder>humi_edit</zorder>
+    <zorder>label_9</zorder>
+    <zorder>label_15</zorder>
+    <zorder>label_12</zorder>
+    <zorder>label_16</zorder>
+    <zorder>temp_label_2</zorder>
+    <zorder>label_8</zorder>
+    <zorder>lineEdit_temp</zorder>
+    <zorder>lineEdit_humi</zorder>
+   </widget>
+   <widget class="QWidget" name="widget_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>52</y>
+      <width>391</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>241</width>
+      <height>241</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>10000</width>
+      <height>10000</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(225, 232, 231);</string>
+    </property>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>10</y>
+       <width>181</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>实时感应信息</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>210</y>
+       <width>55</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>空气湿度</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>310</width>
+       <height>73</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_18">
+        <property name="minimumSize">
+         <size>
+          <width>111</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/空气温度.png);</string>
         </property>
         <property name="text">
-         <string>环境湿度：----</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="soil_label">
+       <widget class="QLabel" name="temp_label">
+        <property name="minimumSize">
+         <size>
+          <width>191</width>
+          <height>31</height>
+         </size>
+        </property>
         <property name="font">
          <font>
-          <pointsize>20</pointsize>
+          <pointsize>30</pointsize>
           <bold>true</bold>
          </font>
         </property>
         <property name="text">
-         <string>土壤湿度：----</string>
+         <string>--°C</string>
         </property>
        </widget>
       </item>
      </layout>
     </widget>
-    <widget class="QLabel" name="fan_state">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>41</y>
-       <width>113</width>
-       <height>42</height>
+       <x>20</x>
+       <y>380</y>
+       <width>310</width>
+       <height>73</height>
       </rect>
      </property>
-     <property name="font">
-      <font>
-       <pointsize>20</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>风扇：-</string>
-     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QLabel" name="label_20">
+        <property name="minimumSize">
+         <size>
+          <width>111</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/土壤湿度.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="soil_label">
+        <property name="minimumSize">
+         <size>
+          <width>191</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>30</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>--%RH</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <widget class="QPushButton" name="ctl_fan_button">
+    <widget class="QLabel" name="label_21">
      <property name="geometry">
       <rect>
-       <x>630</x>
-       <y>48</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>开关</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="pump_state">
-     <property name="geometry">
-      <rect>
-       <x>510</x>
-       <y>80</y>
-       <width>113</width>
-       <height>42</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>20</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>水泵：-</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="ctl_pump_button">
-     <property name="geometry">
-      <rect>
-       <x>630</x>
-       <y>87</y>
-       <width>93</width>
-       <height>28</height>
+       <x>100</x>
+       <y>60</y>
+       <width>52</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
-      <string>开关</string>
+      <string>空气温度</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="test_button">
+    <widget class="QLabel" name="label_22">
      <property name="geometry">
       <rect>
-       <x>630</x>
-       <y>0</y>
-       <width>91</width>
-       <height>30</height>
+       <x>100</x>
+       <y>360</y>
+       <width>52</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
-      <string>导出数据</string>
+      <string>土壤湿度</string>
      </property>
     </widget>
+    <widget class="Switch_label" name="export_data_label">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>20</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/导出数据.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>21</x>
+       <y>231</y>
+       <width>310</width>
+       <height>73</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_19">
+        <property name="minimumSize">
+         <size>
+          <width>111</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/空气湿度.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="humi_label">
+        <property name="minimumSize">
+         <size>
+          <width>191</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>30</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>--%RH</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <zorder>label_17</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>label_23</zorder>
+    <zorder>label_21</zorder>
+    <zorder>label_22</zorder>
+    <zorder>export_data_label</zorder>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>10</y>
+      <width>89</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <item>
+      <widget class="Switch_label" name="min_label">
+       <property name="minimumSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/最小化.png);
+background-color: rgb(180, 211, 206);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="max_label">
+       <property name="minimumSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(241, 244, 221);
+image: url(:/全屏 最大化 (1).png);
+background-color: rgb(180, 211, 206);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Switch_label" name="quit_label">
+       <property name="minimumSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(:/退出.png);
+background-color: rgb(180, 211, 206);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>749</width>
-     <height>24</height>
-    </rect>
+  <action name="action">
+   <property name="text">
+    <string>自动</string>
    </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>手动</string>
+   </property>
+  </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Switch_label</class>
+   <extends>QLabel</extends>
+   <header location="global">switch_label.h</header>
+   <slots>
+    <signal>clicked()</signal>
+    <signal>hovered()</signal>
+    <signal>unhovered()</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>ModifyLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">modifylineedit.h</header>
+   <slots>
+    <signal>submit()</signal>
+    <signal>cancel()</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

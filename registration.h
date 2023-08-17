@@ -19,7 +19,23 @@ public:
     ~registration();
 
 private slots:
-    void on_pushButton_clicked();
+//    void on_pushButton_clicked();
+
+//    void on_pushButton_2_clicked();
+
+//    void on_label_2_clicked();
+
+    void on_label_cancel_clicked();
+
+    void on_label_submit_clicked();
+
+    void on_label_cancel_hovered();
+
+    void on_label_cancel_unhovered();
+
+    void on_label_submit_hovered();
+
+    void on_label_submit_unhovered();
 
 private:
     Ui::registration *ui;

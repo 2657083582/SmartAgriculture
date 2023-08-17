@@ -17,12 +17,23 @@ class login : public QMainWindow
 public:
     explicit login(QWidget *parent = nullptr);
     loginData *logindata;
+    void setUser(QString userName, QString password);
     ~login();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_label_login_clicked();
 
-    void on_pushButton_2_clicked();
+//    void on_pushButton_2_clicked();
+
+    void on_label_regist_clicked();
+
+    void on_label_login_hovered();
+
+    void on_label_login_unhovered();
+
+    void on_label_regist_hovered();
+
+    void on_label_regist_unhovered();
 
 private:
     Ui::login *ui;
