@@ -35,6 +35,8 @@ private slots:
 
     void on_label_regist_unhovered();
 
+    void on_label_login_submit();
+
 private:
     Ui::login *ui;
     registration res;

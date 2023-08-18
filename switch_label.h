@@ -2,6 +2,7 @@
 #define SWITCH_LABEL_H
 #include <QLabel>
 #include <QMouseEvent>
+#include <QKeyEvent>
 
 class Switch_label:public QLabel
 {
@@ -36,10 +37,14 @@ signals:
 
     void m_ableChanged();
 
+    void submit();
+
 protected:
     void mousePressEvent(QMouseEvent *event) override;
 
     bool eventFilter(QObject *obj, QEvent *event) override;
+
+    void keyPressEvent(QKeyEvent *event) override;
 
 private:
     bool m_flag;

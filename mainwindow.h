@@ -50,8 +50,6 @@ private slots:
 
     void on_export_data_label_clicked();
 
-
-
     void on_auto_label_clicked();
 
     void on_auto_label_hovered();

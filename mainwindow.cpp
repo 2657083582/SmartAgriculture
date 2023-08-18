@@ -304,8 +304,10 @@ void MainWindow::on_lineEdit_temp_submit()
         return;
     }
     ui->temp_label_2->setText(temp+"°C");
+
     QString data="temp:"+temp;
     QByteArray byteArray=data.toUtf8();
+    qDebug()<<data;
     QMQTT::Message msg(0,publishtopic,byteArray);
     client->publish(msg);
 
@@ -336,7 +338,10 @@ void MainWindow::on_lineEdit_humi_submit()
     ui->humi_label_2->setText(humi+"%RH");
     QString data="humi:"+humi;
     QByteArray byteArray=data.toUtf8();
+    qDebug()<<data;
     QMQTT::Message msg(0,publishtopic,byteArray);
+    client->publish(msg);
+
     ui->lineEdit_humi->hide();
 }
 

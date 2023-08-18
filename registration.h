@@ -39,7 +39,7 @@ private slots:
 
 private:
     Ui::registration *ui;
-    MainWindow w;
+//    MainWindow w;
 //    login *log;
 };
 

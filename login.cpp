@@ -40,13 +40,6 @@ void login::on_label_login_clicked()
     }
 }
 
-//void login::on_pushButton_2_clicked()
-//{
-//    this->hide();
-//    res.show();
-//    ui->centralwidget->hide();
-//}
-
 void login::on_label_regist_clicked()
 {
     res.show();
@@ -78,5 +71,11 @@ void login::on_label_regist_hovered()
 void login::on_label_regist_unhovered()
 {
     ui->label_regist->setFrameShape(QFrame::NoFrame);
+}
+
+
+void login::on_label_login_submit()
+{
+    on_label_login_clicked();
 }
 

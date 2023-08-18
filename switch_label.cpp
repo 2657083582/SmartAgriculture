@@ -99,3 +99,12 @@ bool Switch_label::eventFilter(QObject *obj, QEvent *event)
     }
     return QLabel::eventFilter(obj,event);
 }
+
+void Switch_label::keyPressEvent(QKeyEvent *event)
+{
+    if(event->key() == Qt::Key_Return){
+        emit submit();
+        qDebug()<<"submit";
+    }
+    QLabel::keyPressEvent(event);
+}
