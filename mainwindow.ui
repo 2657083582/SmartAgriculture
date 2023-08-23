@@ -298,7 +298,7 @@ image: url(:/滑动按钮（X） (1).png);</string>
       <string notr="true"/>
      </property>
      <property name="text">
-      <string>--°C</string>
+      <string>30°C</string>
      </property>
     </widget>
     <widget class="Switch_label" name="temp_edit">
@@ -333,7 +333,7 @@ image: url(:/修改.png);</string>
     <widget class="QLabel" name="humi_label_2">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>80</x>
        <y>160</y>
        <width>115</width>
        <height>37</height>
@@ -355,7 +355,7 @@ image: url(:/修改.png);</string>
       <string notr="true"/>
      </property>
      <property name="text">
-      <string>--%RH</string>
+      <string>20%RH</string>
      </property>
     </widget>
     <widget class="Switch_label" name="humi_edit">
